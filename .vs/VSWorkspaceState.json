@@ -7,9 +7,10 @@
     "\\app_server\\views",
     "\\app_server\\views\\layouts",
     "\\app_server\\views\\partials",
-    "\\bin",
-    "\\public"
+    "\\data",
+    "\\public",
+    "\\public\\images"
   ],
-  "SelectedNode": "\\app_server\\views\\layouts\\layout.hbs",
+  "SelectedNode": "\\data\\trips.json",
   "PreviewInSolutionExplorer": false
 }
