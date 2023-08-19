@@ -1,13 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const ctrlMain = require('../controllers/main');
-const ctrlTrips = require('../controllers/trips'); // require the trips controller
+//const ctrlMain = require('../controllers/main');
+const tripsController = require('../controllers/trips'); // require the trips controller
 
-/* GET home page. */
-router.get('/', ctrlMain.index);
+router
+    .route('/trips')
+    .get(tripsController.tripsList)
+    .post(tripsController.tripsAddTrip);
 
-/* Trip routes. */
-router.get('/trips', ctrlTrips.tripsList);
-router.get('/trips/:tripCode', ctrlTrips.tripsFindByCode);
+router
+    .route('/trips/:tripCode')
+    .get(tripsController.tripsFindByCode)
+    .put(tripsController.tripsUpdateTrip);
 
 module.exports = router;
